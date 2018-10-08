@@ -15,7 +15,6 @@ class Song
 
   def self.new_by_filename(file)
     parsed = file.split("-")
-    binding.pry
     song_name = parsed[1].strip
     artist_name = parsed[0].strip
     new_song = self.new(song_name)
