@@ -16,16 +16,23 @@ class Artist
 
   def self.all
     @@all
+<<<<<<< HEAD
     #binding.pry
+=======
+>>>>>>> 4de486590cf8ff3f39a22b0301159bd48e6e3a42
   end
 
   def save
     @@all << self
+<<<<<<< HEAD
     #binding.pry
+=======
+>>>>>>> 4de486590cf8ff3f39a22b0301159bd48e6e3a42
   end
 
   def self.find_or_create_by_name(artist)
 
+<<<<<<< HEAD
     my_new_art = @@all.find do |artist_inst|
         artist_inst.name == artist
         end
@@ -36,6 +43,14 @@ class Artist
       new_artist.save
       new_artist
     end
+=======
+    @@all.each do |artists|
+      if artists.name == artist
+        return artist
+      end
+    end
+    self.new(artist)
+>>>>>>> 4de486590cf8ff3f39a22b0301159bd48e6e3a42
   end
 
   def print_songs
